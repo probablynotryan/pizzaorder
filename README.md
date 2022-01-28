@@ -20,17 +20,27 @@ This webpage takes a pizza order from the user calculates the final cost of the 
 
  ### Tests  
 
+Describe calculateTotal()  
+
+Test: "This should add the current pizza's price to the current total."  
+Code: let total = 11.45;
+      let pizza = {"Small", "Cheese", "Pepperoni"};
+      calculateTotal(pizza, total);  
+Expected Output = 'total = 22.90'
+
+----
+
 Describe setPizzaPrice()  
 
-Test: "This should return a string of '$11.45' if the property 'Small' is sent to it".  
+Test: "This should return a number of '11.45' if the property 'Small' is sent to it".  
 Code: let pizza = New Pizza ("Small", "Cheese", "No Pepperoni");
 setPizzaPrice(pizza)  
-Expected Output = "$11.45"
+Expected Output = "11.45"
 
 
 ---
 
-Describe PizzaOrder.prototype.addPizza  
+Describe PizzaOrder.prototype.addPizza()
 
 Test: "This should add a Pizza object to the PizzaOrder object with a currentPizza property of '1'."  
 Code: myPizzaOrder.addPizza(pizza1)  
@@ -38,7 +48,7 @@ Expected Output: "myPizzaOrder = {pizzas:{pizza1}, currentID: 1}"
 
 ---
 
-Describe PizzaOrder.prototype.assignID  
+Describe PizzaOrder.prototype.assignID()  
 
 Test: "This should add '1' to the currentID whenever the assignID prototype is called."  
 Code: myPizzaOrder.assignID()  
