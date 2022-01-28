@@ -32,10 +32,15 @@ Expected Output = 'total = 22.90'
 
 Describe Pizza.prototype.checkPrice()
 
+Test: "This should add 13.45 to the price property if the pepperoni property is 'Extra Pepperoni' and the size property is 'Small'.  
+Code: let pizza = New Pizza ("Small", "Cheese", "Extra Pepperoni")  
+pizza.checkPrice();  
+Expected Output = 'pizza = {size: "Small", cheese: "Cheese", pepperoni: "Extra Pepperoni", price: 13.45}'
+
 Test: "This should add a price property of 11.45 if the size property is "Small".  
 Code: let pizza = New Pizza ("Small", "Cheese", "No Pepperoni");
-Pizza.checkPrice();
-Expected Output = "pizza {size: "Small", cheese: "Cheese" pepperoni: "No Pepperoni", price: 11.45}"
+pizza.checkPrice();
+Expected Output = 'pizza {size: "Small", cheese: "Cheese" pepperoni: "No Pepperoni", price: 11.45}'
 
 
 ---
