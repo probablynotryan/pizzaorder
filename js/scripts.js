@@ -7,18 +7,20 @@ function Pizza(size, pepperoni, cheese) {
 }
 
 function PizzaOrder() {
-  this.pizzas = {}
+  this.pizzas = {};
   this.currentPizza = 0;
 }
 
-Pizza.prototype.checkPrice = function(){
+Pizza.prototype.checkPrice = function() {
   let currentPizzaPrice = 0;
   if (this.size === "Small"){
     currentPizzaPrice += 11.45;
   } else if (this.size === "Medium"){
     currentPizzaPrice += 12.95;
-  } else {
+  } else if (this.size === "Large"){
     currentPizzaPrice += 15.95;
+  } else {
+    currentPizzaPrice += 18.95;
   }
   if (this.pepperoni === "Add Pepperoni") {
     currentPizzaPrice += 1;
@@ -35,11 +37,9 @@ Pizza.prototype.checkPrice = function(){
   return currentPizzaPrice;
   }
 
-
-function calculateTotal(pizza, total){
+function calculateTotal(pizza, total) {
   total += setPizzaPrice(pizza);
 }
-
 
 PizzaOrder.prototype.addPizza = function (pizza) {
   pizza.id = this.assignID();
@@ -54,7 +54,6 @@ PizzaOrder.prototype.assignID = function () {
 let myPizzaOrder = new PizzaOrder();
 
 // User Interface
-
 $(document).ready(function() {
 $("#subtotal").text(0);
 $("#tax").text(0);
@@ -71,9 +70,8 @@ let total = 0;
     $("#order-list-price").append("<li> $" + pizza.price + "</li><br>");
     total += pizza.price;
     $("#subtotal").text(total.toFixed(2));
-    $("#tax").text((total * (.03)).toFixed(2));
-    $("#grand-total").text((total + (total * (.03))).toFixed(2));
+    $("#tax").text((total * (.07654321)).toFixed(2));
+    $("#grand-total").text((total + (total * (.07654321))).toFixed(2));
     console.log(total.toFixed(2))
-
-  })
+  });
 });
