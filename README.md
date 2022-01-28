@@ -12,19 +12,22 @@
 * Javascript  
   
 ## Description
-This webpage takes a pizza order from the user calculates the final cost of the pizza! More information on the way (still in development).
+This application takes a pizza order from the user (by dropdown selectors) and generates a pizza order and total cost.
 
 
 ### Setup/Installation Requirements
-* TBA
+* Git clone this repository to your computer and run "index.html" in a supported browser.
+* On the left column, select a size of pie as well as if you'd like pepperoni and cheese from the dropdowns, followed by "Add Pizza".
+* On the right column, your pizza item as well as the calculated cost will be added to your order.
+* Press the reload button to refresh the page and start over!
 
  ### Tests  
 
 Describe calculateTotal()  
 
 Test: "This should add the current pizza's price to the current total."  
-Code: let total = 11.45;
-      let pizza = {"Small", "Cheese", "Pepperoni", 11.45};
+Code: let total = 11.45;  
+      let pizza = {"Small", "Cheese", "Pepperoni", 11.45};  
       calculateTotal(pizza, total);  
 Expected Output = 'total = 22.90'
 
@@ -47,7 +50,7 @@ Expected Output = 'pizza {size: "Small", cheese: "Cheese" pepperoni: "No Peppero
 
 Describe PizzaOrder.prototype.addPizza()
 
-Test: "This should add a Pizza object to the PizzaOrder object with a currentPizza property of '1'."  
+Test: "This should add a Pizza object to the PizzaOrder object with a currentID property of '1'."  
 Code: myPizzaOrder.addPizza(pizza1)  
 Expected Output: "myPizzaOrder = {pizzas:{pizza1}, currentID: 1}"
 
