@@ -1,8 +1,9 @@
 // Business Logic
-function Pizza(size, pepperoni, cheese) {
+function Pizza(size, pepperoni, cheese, goldfish) {
   this.size = size;
   this.pepperoni = pepperoni;
   this.cheese = cheese;
+  this.goldfish = goldfish;
   this.price = this.checkPrice();
 }
 
@@ -34,6 +35,11 @@ Pizza.prototype.checkPrice = function() {
   } else {
     currentPizzaPrice += 0;
   }
+  if (this.goldfish === "Extra Goldfish"){
+    currentPizzaPrice += 13.10;
+  } else {
+    currentPizzaPrice += 5.20;
+  }
   return currentPizzaPrice;
   }
 
@@ -64,9 +70,10 @@ let total = 0;
     let sizeOfPizza = $("#size-of-pizza").val();
     let pepperoniTopping = $("#pepperoni-topping").val();
     let cheeseTopping = $("#cheese-topping").val();
-    let pizza = new Pizza (sizeOfPizza, pepperoniTopping, cheeseTopping);
+    let goldfishTopping = $("#goldfish-crackers-topping").val();
+    let pizza = new Pizza (sizeOfPizza, pepperoniTopping, cheeseTopping, goldfishTopping);
     myPizzaOrder.addPizza(pizza);
-    $("#order-list-pizza").append("<li> " + pizza.size + " Pizza <br>(" + pizza.cheese + ", " + pizza.pepperoni + ") </li>");
+    $("#order-list-pizza").append("<li><img src='/img/small-pizza.jpg' alt='Pizza icon' id='pizza-icon'> " + pizza.size + " Pizza <br>(" + pizza.cheese + ", " + pizza.pepperoni + ", " + pizza.goldfish + ") </li>");
     $("#order-list-price").append("<li> $" + pizza.price + "</li><br>");
     total += pizza.price;
     $("#subtotal").text(total.toFixed(2));
