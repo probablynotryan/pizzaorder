@@ -20,11 +20,20 @@ PizzaOrder.prototype.assignID = function () {
   return this.currentPizza;
 }
 
-let pizza1 = new Pizza("Medium", "Pepperoni", "No Cheese");
-let myPizzaOrder = new PizzaOrder(pizza1);
-
-
-
-
+let myPizzaOrder = new PizzaOrder();
 
 // User Interface
+
+$(document).ready(function() {
+console.log("document ready")
+
+  $("form#add-pizza").submit(function(event) {
+    event.preventDefault();
+    let sizeOfPizza = $("#size-of-pizza").val();
+    let pepperoniTopping = $("#pepperoni-topping").val();
+    let cheeseTopping = $("#cheese-topping").val();
+    let pizza1 = new Pizza (sizeOfPizza, pepperoniTopping, cheeseTopping);
+    console.log("button clicked");
+    myPizzaOrder.addPizza(pizza1);
+  })
+});
