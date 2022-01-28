@@ -1,11 +1,13 @@
 #main {
   border: solid black;
   min-height: 500px;
+  min-width: 480px;
   padding-top: 10px;
   margin-right: 2px;
 }
 .container {
   margin-top: 50px;
+  margin-bottom: 2;
   background-color: white;
 }
 body {
