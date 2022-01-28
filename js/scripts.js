@@ -10,6 +10,16 @@ function PizzaOrder() {
   this.currentPizza = 0;
 }
 
+function setPizzaPrice(pizza){
+  if (pizza.size === "Small") {
+    return "$11.45";
+  } else if (pizza.size === "Medium") {
+    return "$12.95"
+  } else {
+    return "$14.95"
+  }
+}
+
 PizzaOrder.prototype.addPizza = function (pizza) {
   pizza.id = this.assignID();
   this.pizzas[pizza.id] = pizza;
@@ -32,8 +42,13 @@ console.log("document ready")
     let sizeOfPizza = $("#size-of-pizza").val();
     let pepperoniTopping = $("#pepperoni-topping").val();
     let cheeseTopping = $("#cheese-topping").val();
-    let pizza1 = new Pizza (sizeOfPizza, pepperoniTopping, cheeseTopping);
+    let pizza = new Pizza (sizeOfPizza, pepperoniTopping, cheeseTopping);
     console.log("button clicked");
-    myPizzaOrder.addPizza(pizza1);
+    myPizzaOrder.addPizza(pizza);
+    console.log(pizza);
+    let pizzaPrice = setPizzaPrice(pizza)
+    $("#pizza-list").append("<li>" + sizeOfPizza + " Pizza " + pizzaPrice + "</li>");
+
+
   })
 });
