@@ -24,18 +24,18 @@ Describe calculateTotal()
 
 Test: "This should add the current pizza's price to the current total."  
 Code: let total = 11.45;
-      let pizza = {"Small", "Cheese", "Pepperoni"};
+      let pizza = {"Small", "Cheese", "Pepperoni", 11.45};
       calculateTotal(pizza, total);  
 Expected Output = 'total = 22.90'
 
 ----
 
-Describe setPizzaPrice()  
+Describe Pizza.prototype.checkPrice()
 
-Test: "This should return a number of '11.45' if the property 'Small' is sent to it".  
+Test: "This should add a price property of 11.45 if the size property is "Small".  
 Code: let pizza = New Pizza ("Small", "Cheese", "No Pepperoni");
-setPizzaPrice(pizza)  
-Expected Output = "11.45"
+Pizza.checkPrice();
+Expected Output = "pizza {size: "Small", cheese: "Cheese" pepperoni: "No Pepperoni", price: 11.45}"
 
 
 ---
@@ -66,9 +66,9 @@ Expected Output: "myPizzaOrder = "{pizzas: {}, currentID: 0}"
 
  Describe: Pizza()  
 
-Test: "It should create an object with pepperoni, cheese, and size properties."  
-Code: let pizza1 = New Pizza("Medium", "Pepperoni", "No Cheese")  
-Expected Output: 'pizza1 = {size: "Medium", Pepperoni: "Pepperoni", Cheese: "No Cheese"}'
+Test: "It should create an object with size, pepperoni, cheese and price properties."  
+Code: let pizza1 = New Pizza("Medium", "Pepperoni", "No Cheese", 0)  
+Expected Output: 'pizza1 = {size: "Medium", Pepperoni: "Pepperoni", Cheese: "No Cheese", Price: 0}'
  
 
 ## Known Bugs
