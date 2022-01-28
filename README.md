@@ -1,9 +1,9 @@
 
-# Domin-oh-look-objects Pizza
+# Domin-oh-look! Objects Pizza
 
 #### By Ryan Bass (theryanbass@gmail.com)
 
-### This is our four project with Epicodus, demonstrating familiarness with objects and constructors.
+### This is our fourth project with Epicodus, demonstrating familiarness with objects and constructors.
 
 ## Technologies Used
 
