@@ -30,7 +30,7 @@ Expected Output: "myPizzaOrder = {pizzas:{pizza1}, currentID: 1}"
 
 Describe PizzaOrder.prototype.assignID  
 
-Test: "This should add '1' to the currentID whenever it is called."  
+Test: "This should add '1' to the currentID whenever the assignID prototype is called."  
 Code: myPizzaOrder.assignID()  
 Expected Output: "myPizzaOrder = {pizzas: {}, currentID: 1}"
 

@@ -1,4 +1,7 @@
 .col {
   border: solid black;
-  height: 200px;
+  height: 300px;
+}
+.container {
+  margin-top: 50px;
 }
