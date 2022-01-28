@@ -13,7 +13,7 @@
 <body>
   <div class="container">
     <div class="row">
-      <div class="col">
+      <div class="col" id="main">
         <h3>Build Your Pizza!</h3>
         <br>
         <form id="add-pizza">
@@ -39,15 +39,22 @@
           <button type="submit" class="btn btn-primary" id="add-pizza-button">Add Pizza!</button>
         </form>
       </div>
-      <div class="col">
+      <div class="col" id="main">
         <h3>Your Current Order:</h3>
-        <br>
-        <ul id="pizza-list">
-        </ul>
+          <div class="row">
+          <div class="col">
+            <ul id="order-list-pizza">
+            </ul>
+          </div>
+          <div class="col">
+            <ul id="order-list-price">
+            </ul>
+          </div>
+        </div>
         <hr>
         <div class="totals">
           <p>Subtotal: $<span id="subtotal"></span></p>
-          <p>Tax (0.03%): $<span id="tax"></span></p>
+          <p>State Tax (0.03%): $<span id="tax"></span></p>
           <p>Grand Total: $<span id="grand-total"></span></p>
         </div>
       </div>

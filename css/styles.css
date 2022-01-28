@@ -1,7 +1,8 @@
-.col {
+#main {
   border: solid black;
   min-height: 500px;
   padding-top: 10px;
+  margin-right: 2px;
 }
 .container {
   margin-top: 50px;
@@ -17,4 +18,11 @@ body {
 }
 .totals p{
   margin-top: -10px;
+}
+ul {
+  list-style-type: none;
+}
+#order-list-price{
+  padding-right: 20px;
+  text-align: right;
 }

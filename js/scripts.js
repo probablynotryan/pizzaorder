@@ -70,8 +70,8 @@ let total = 0;
     console.log("button clicked");
     myPizzaOrder.addPizza(pizza);
     console.log(pizza);
-    // let pizzaPrice = setPizzaPrice(pizza)
-    $("#pizza-list").append("<li>" + sizeOfPizza + " Pizza -- $" + pizza.price + "</li>");
+    $("#order-list-pizza").append("<li> " + pizza.size + " Pizza <br>(" + pizza.cheese + ", " + pizza.pepperoni + ") </li>");
+    $("#order-list-price").append("<li> $" + pizza.price + "</li><br>");
     total += pizza.price;
 
     $("#subtotal").text(total.toFixed(2));
