@@ -20,7 +20,7 @@ Pizza.prototype.checkPrice = function(){
   } else {
     currentPizzaPrice += 15.95;
   }
-  if (this.pepperoni === "Pepperoni") {
+  if (this.pepperoni === "Add Pepperoni") {
     currentPizzaPrice += 1;
   } else if (this.pepperoni === "Extra Pepperoni") {
     currentPizzaPrice += 2;
@@ -56,7 +56,6 @@ let myPizzaOrder = new PizzaOrder();
 // User Interface
 
 $(document).ready(function() {
-console.log("document ready")
 $("#subtotal").text(0);
 $("#tax").text(0);
 $("#grand-total").text(0);
@@ -67,13 +66,10 @@ let total = 0;
     let pepperoniTopping = $("#pepperoni-topping").val();
     let cheeseTopping = $("#cheese-topping").val();
     let pizza = new Pizza (sizeOfPizza, pepperoniTopping, cheeseTopping);
-    console.log("button clicked");
     myPizzaOrder.addPizza(pizza);
-    console.log(pizza);
     $("#order-list-pizza").append("<li> " + pizza.size + " Pizza <br>(" + pizza.cheese + ", " + pizza.pepperoni + ") </li>");
     $("#order-list-price").append("<li> $" + pizza.price + "</li><br>");
     total += pizza.price;
-
     $("#subtotal").text(total.toFixed(2));
     $("#tax").text((total * (.03)).toFixed(2));
     $("#grand-total").text((total + (total * (.03))).toFixed(2));
