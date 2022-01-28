@@ -28,3 +28,12 @@ ul {
   padding-right: 20px;
   text-align: right;
 }
+#small-note{
+  font-family: Dongle;
+  margin-top: 10px;
+  font-size: 13px;
+  margin-bottom: -10px;
+}
+.btn {
+  margin-top: 10px;
+}
