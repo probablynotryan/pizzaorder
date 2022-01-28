@@ -12,13 +12,27 @@ function PizzaOrder() {
 }
 
 Pizza.prototype.checkPrice = function(){
+  let currentPizzaPrice = 0;
   if (this.size === "Small"){
-    return 11.45;
+    currentPizzaPrice += 11.45;
   } else if (this.size === "Medium"){
-    return 12.95;
+    currentPizzaPrice += 12.95;
   } else {
-    return 15.95;
+    currentPizzaPrice += 15.95;
   }
+  if (this.pepperoni === "Pepperoni") {
+    currentPizzaPrice += 1;
+  } else if (this.pepperoni === "Extra Pepperoni") {
+    currentPizzaPrice += 2;
+  } else {
+    currentPizzaPrice += 0;
+  }
+  if (this.cheese === "Extra Cheese"){
+    currentPizzaPrice += 1;
+  } else {
+    currentPizzaPrice += 0;
+  }
+  return currentPizzaPrice;
   }
 
 
