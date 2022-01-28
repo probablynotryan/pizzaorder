@@ -3,6 +3,7 @@ function Pizza(size, pepperoni, cheese) {
   this.size = size;
   this.pepperoni = pepperoni;
   this.cheese = cheese;
+  this.price = this.checkPrice();
 }
 
 function PizzaOrder() {
@@ -10,15 +11,21 @@ function PizzaOrder() {
   this.currentPizza = 0;
 }
 
-function setPizzaPrice(pizza){
-  if (pizza.size === "Small") {
-    return "$11.45";
-  } else if (pizza.size === "Medium") {
-    return "$12.95"
+Pizza.prototype.checkPrice = function(){
+  if (this.size === "Small"){
+    return 11.45;
+  } else if (this.size === "Medium"){
+    return 12.95;
   } else {
-    return "$14.95"
+    return 15.95;
   }
+  }
+
+
+function calculateTotal(pizza, total){
+  total += setPizzaPrice(pizza);
 }
+
 
 PizzaOrder.prototype.addPizza = function (pizza) {
   pizza.id = this.assignID();
@@ -36,7 +43,10 @@ let myPizzaOrder = new PizzaOrder();
 
 $(document).ready(function() {
 console.log("document ready")
-
+$("#subtotal").text(0);
+$("#tax").text(0);
+$("#grand-total").text(0);
+let total = 0;
   $("form#add-pizza").submit(function(event) {
     event.preventDefault();
     let sizeOfPizza = $("#size-of-pizza").val();
@@ -46,9 +56,14 @@ console.log("document ready")
     console.log("button clicked");
     myPizzaOrder.addPizza(pizza);
     console.log(pizza);
-    let pizzaPrice = setPizzaPrice(pizza)
-    $("#pizza-list").append("<li>" + sizeOfPizza + " Pizza " + pizzaPrice + "</li>");
+    // let pizzaPrice = setPizzaPrice(pizza)
+    $("#pizza-list").append("<li>" + sizeOfPizza + " Pizza -- $" + pizza.price + "</li>");
+    total += pizza.price;
 
+    $("#subtotal").text(total.toFixed(2));
+    $("#tax").text((total * (.03)).toFixed(2));
+    $("#grand-total").text((total + (total * (.03))).toFixed(2));
+    console.log(total.toFixed(2))
 
   })
 });
