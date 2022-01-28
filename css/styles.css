@@ -1,6 +1,6 @@
 .col {
   border: solid black;
-  height: 500px;
+  min-height: 500px;
   padding-top: 10px;
 }
 .container {
@@ -10,4 +10,11 @@
 body {
   background-image: url("../img/background.jpg");
   background-repeat: repeat;
+}
+.totals {
+  text-align: right;
+  padding-right: 20px;
+}
+.totals p{
+  margin-top: -10px;
 }
