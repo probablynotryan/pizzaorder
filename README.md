@@ -20,6 +20,16 @@ This webpage takes a pizza order from the user calculates the final cost of the 
 
  ### Tests  
 
+Describe setPizzaPrice()  
+
+Test: "This should return a string of '$11.45' if the property 'Small' is sent to it".  
+Code: let pizza = New Pizza ("Small", "Cheese", "No Pepperoni");
+setPizzaPrice(pizza)  
+Expected Output = "$11.45"
+
+
+---
+
 Describe PizzaOrder.prototype.addPizza  
 
 Test: "This should add a Pizza object to the PizzaOrder object with a currentPizza property of '1'."  
