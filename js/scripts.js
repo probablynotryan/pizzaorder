@@ -79,6 +79,5 @@ let total = 0;
     $("#subtotal").text(total.toFixed(2));
     $("#tax").text((total * (.07654321)).toFixed(2));
     $("#grand-total").text((total + (total * (.07654321))).toFixed(2));
-    console.log(total.toFixed(2))
   });
 });
