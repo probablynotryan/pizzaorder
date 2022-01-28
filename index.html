@@ -23,14 +23,12 @@
             <option value="Medium">Medium ($12.95)</option>
             <option value="Large">Large ($15.95)</option>
           </select>
-          <br>
           <label for="cheese-topping">Cheese:</label>
           <select class="form-control" id="cheese-topping">
             <option value="No Cheese">No Cheese</option>
             <option value="Cheese">Cheese (Free!)</option>
             <option value="Extra Cheese">Extra Cheese (+$1.00)</option>
           </select>
-          <br>
           <label for="pepperoni-topping">Pepperoni:</label>
           <select class="form-control" id="pepperoni-topping">
             <option value = "No Pepperoni">No Pepperoni</option>
@@ -47,9 +45,11 @@
         <ul id="pizza-list">
         </ul>
         <hr>
-        <p>Subtotal: $<span id="subtotal"></span></p>
-        <p>Tax (0.03%): $<span id="tax"></span></p>
-        <p>Grand Total: $<span id="grand-total"></span></p>
+        <div class="totals">
+          <p>Subtotal: $<span id="subtotal"></span></p>
+          <p>Tax (0.03%): $<span id="tax"></span></p>
+          <p>Grand Total: $<span id="grand-total"></span></p>
+        </div>
       </div>
     </div>
   </div>
