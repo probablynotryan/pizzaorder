@@ -74,7 +74,7 @@ let total = 0;
     let pizza = new Pizza (sizeOfPizza, pepperoniTopping, cheeseTopping, goldfishTopping);
     myPizzaOrder.addPizza(pizza);
     $("#order-list-pizza").append("<li><img src='/img/small-pizza.jpg' alt='Pizza icon' id='pizza-icon'> " + pizza.size + " Pizza <br>(" + pizza.cheese + ", " + pizza.pepperoni + ", " + pizza.goldfish + ") </li>");
-    $("#order-list-price").append("<li> $" + pizza.price + "</li><br>");
+    $("#order-list-price").append("<li> $" + pizza.price.toFixed(2) + "</li><br>");
     total += pizza.price;
     $("#subtotal").text(total.toFixed(2));
     $("#tax").text((total * (.07654321)).toFixed(2));
