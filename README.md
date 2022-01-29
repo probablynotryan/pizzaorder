@@ -3,7 +3,7 @@
 
 #### By Ryan Bass (theryanbass@gmail.com)
 
-### This is our fourth project with Epicodus, demonstrating familiarness with objects and constructors.
+### This is our fourth project with Epicodus, demonstrating familiarity with objects and constructors.
 
 ## Technologies Used
 
@@ -12,14 +12,13 @@
 * Javascript  
   
 ## Description
-This application takes a pizza order from the user (by dropdown selectors) and generates a pizza order and total cost.
+This webpage takes a pizza order from the user (by dropdown selectors) and generates a pizza order and total cost.
 
 
 ### Setup/Installation Requirements
 * Git clone this repository to your computer and run "index.html" in a supported browser.
 * On the left column, select a size of pie as well as if you'd like pepperoni and cheese from the dropdowns, followed by "Add Pizza".
 * On the right column, your pizza item as well as the calculated cost will be added to your order.
-* Press the reload button to refresh the page and start over!
 
  ### Tests  
 
@@ -67,7 +66,7 @@ Expected Output: "myPizzaOrder = {pizzas: {}, currentID: 1}"
 Describe PizzaOrder()  
 
 Test: "This should create a object containing an empty object for pizzas and a currentID property of 0."  
-Code: let myPizzaOrder = new PizzaOrder();
+Code: let myPizzaOrder = new PizzaOrder();  
 Expected Output: "myPizzaOrder = "{pizzas: {}, currentID: 0}"
 
  ---
@@ -76,7 +75,7 @@ Expected Output: "myPizzaOrder = "{pizzas: {}, currentID: 0}"
 
 Test: "It should create an object with size, pepperoni, cheese and price properties."  
 Code: let pizza1 = New Pizza("Medium", "Pepperoni", "No Cheese", 0)  
-Expected Output: 'pizza1 = {size: "Medium", Pepperoni: "Pepperoni", Cheese: "No Cheese", Price: 0}'
+Expected Output: 'pizza1 = {size: "Medium", pepperoni: "Pepperoni", cheese: "No Cheese", price: 0}'
  
 
 ## Known Bugs
